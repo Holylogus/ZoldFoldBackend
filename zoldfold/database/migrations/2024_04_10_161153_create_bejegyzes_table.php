@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('bejegyzes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tevekenyseg_id')->references('tevekenyseg_id')->on('tevekenysegs');
-            $table->foreignId('osztaly_id')->references('osztaly_id')->on('users');
+            $table->string('osztaly_id');
             $table->boolean('allapot');
             $table->timestamps();
         });

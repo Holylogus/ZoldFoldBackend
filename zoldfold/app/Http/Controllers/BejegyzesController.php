@@ -12,6 +12,12 @@ class BejegyzesController extends Controller
         return $bejegyzes;
     }
 
+    public function show($id)
+    {
+        $bejegyzes = response()->json(Bejegyzes::find($id));
+        return $bejegyzes;
+    }
+
     public function store(Request $request)
     {
         $bejegyzes = new Bejegyzes();
